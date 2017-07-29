@@ -2,6 +2,10 @@ Tabs.Droid.MainActivity, Tabs.Droid;md5ba9116186514050008909f78612f00bb.MainActi
 Tabs.Droid.MainActivity, Tabs.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ba9116186514050008909f78612f00bb.MainActivity
 Tabs.Droid.MainActivity;md5ba9116186514050008909f78612f00bb.MainActivity
 tabs.droid.MainActivity;md5ba9116186514050008909f78612f00bb.MainActivity
+Tabs.Droid.MainApplication, Tabs.Droid;md5ba9116186514050008909f78612f00bb.MainApplication
+Tabs.Droid.MainApplication, Tabs.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ba9116186514050008909f78612f00bb.MainApplication
+Tabs.Droid.MainApplication;md5ba9116186514050008909f78612f00bb.MainApplication
+tabs.droid.MainApplication;md5ba9116186514050008909f78612f00bb.MainApplication
 Android.Support.Design.Widget.Snackbar/SnackbarActionClickImplementor, Xamarin.Android.Support.Design;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar.SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
