@@ -170,5 +170,6 @@ E:\Base Project\MSA-Phase-2\Droid\obj\Debug\android\assets\Plugin.Permissions.dl
 E:\Base Project\MSA-Phase-2\Droid\bin\Debug\Plugin.Media.Abstractions.dll.mdb
 E:\Base Project\MSA-Phase-2\Droid\bin\Debug\Plugin.Media.dll.mdb
 E:\Base Project\MSA-Phase-2\Droid\obj\Debug\res\layout\file_paths.xml
+E:\Base Project\MSA-Phase-2\Droid\bin\Debug\Tabs.Droid.dll.config
+E:\Base Project\MSA-Phase-2\Droid\bin\Debug\Tabs.dll.config
 E:\Base Project\MSA-Phase-2\Droid\obj\Debug\Tabs.Droid.dll.mdb
-E:\Base Project\MSA-Phase-2\Droid\bin\Debug\Tabs.Droid.dll.mdb

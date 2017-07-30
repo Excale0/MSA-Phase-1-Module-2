@@ -11,12 +11,16 @@
 namespace Tabs {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Base Project\\Tabs\\AzureTables.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\Base Project\\MSA-Phase-2\\Tabs\\AzureTables.xaml")]
     public partial class AzureTables : global::Xamarin.Forms.ContentPage {
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.ListView CubeList;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AzureTables));
+            CubeList = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "CubeList");
         }
     }
 }

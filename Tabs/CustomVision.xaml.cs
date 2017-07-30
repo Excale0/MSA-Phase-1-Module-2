@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿
+using Newtonsoft.Json;
+using Plugin.Geolocator;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using Tabs.DataModels;
 using Tabs.Model;
 using Xamarin.Forms;
 
@@ -45,6 +48,8 @@ namespace Tabs
                 return file.GetStream();
             });
 
+            //await postLocationAsync();
+
             await MakePredictionRequest(file);
         }
 
@@ -67,28 +72,47 @@ namespace Tabs
 
             byte[] byteData = GetImageAsByteArray(file);
 
-            using (var content = new ByteArrayContent(byteData))
+            var content = new ByteArrayContent(byteData);
+
+
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+
+            response = await client.PostAsync(url, content);
+
+
+            if (response.IsSuccessStatusCode)
             {
+                var responseString = await response.Content.ReadAsStringAsync();
 
-                content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
-                response = await client.PostAsync(url, content);
+                EvaluationModel responseModel = JsonConvert.DeserializeObject<EvaluationModel>(responseString);
 
+                double max = responseModel.Predictions.Max(m => m.Probability);
 
-                if (response.IsSuccessStatusCode)
-                {
-                    var responseString = await response.Content.ReadAsStringAsync();
+                TagLabel.Text = (max >= 0.5) ? "Solved Cube" : "Unsolved Cube";
 
-                    EvaluationModel responseModel = JsonConvert.DeserializeObject<EvaluationModel>(responseString);
-
-                    double max = responseModel.Predictions.Max(m => m.Probability);
-
-                    TagLabel.Text = (max >= 0.5) ? "Solved Cube" : "Unsolved Cube";
-
-                }
-
-                //Get rid of file once we have finished using it
-                file.Dispose();
             }
+
+            //Get rid of file once we have finished using it
+            file.Dispose();
+
+        }
+
+        async Task postLocationAsync()
+        {
+
+            var locator = CrossGeolocator.Current;
+            locator.DesiredAccuracy = 50;
+
+            var position = await locator.GetPositionAsync(10000);
+
+            Phase1Module2table model = new Phase1Module2table()
+            {
+                Longitude = (float)position.Longitude,
+                Latitude = (float)position.Latitude
+
+            };
+
+            await AzureManager.AzureManagerInstance.PostCubeInformation(model);
         }
 
     }

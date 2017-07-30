@@ -49,7 +49,6 @@ E:\Base Project\MSA-Phase-2\Droid\obj\Debug\android\assets\System.Text.RegularEx
 E:\Base Project\MSA-Phase-2\Droid\obj\Debug\android\assets\System.Collections.Concurrent.dll
 E:\Base Project\MSA-Phase-2\Droid\obj\Debug\android\assets\System.Runtime.InteropServices.dll
 E:\Base Project\MSA-Phase-2\Droid\obj\Debug\android\assets\System.Diagnostics.Tools.dll
-E:\Base Project\MSA-Phase-2\Droid\obj\Debug\android\assets\Newtonsoft.Json.dll
 E:\Base Project\MSA-Phase-2\Droid\obj\Debug\android\assets\System.Xml.XDocument.dll
 E:\Base Project\MSA-Phase-2\Droid\obj\Debug\android\assets\System.Xml.Linq.dll
 E:\Base Project\MSA-Phase-2\Droid\obj\Debug\android\assets\System.Runtime.Serialization.Primitives.dll
